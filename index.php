@@ -14,7 +14,7 @@ for($i = 0; $i < 25; $i++)
     $barcode = implode("", $barcode) . $check_digit;
 
     $url = "https://barcode.tec-it.com/barcode.ashx?data=" . $barcode . "&code=UPCA&multiplebarcodes=false&translate-esc=false&unit=Fit&dpi=500&imagetype=Gif&rotation=0&color=%23000000&bgcolor=%23ffffff&qunit=Mm&quiet=0";
-    $img = "barcodes/" . $barcode . ".gif";
+    $img = "barcodes/" . rand(1000000000, 9999999999) . ".gif";
     file_put_contents($img, file_get_contents($url));
 }
 

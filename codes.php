@@ -1,27 +1,13 @@
 <?php
 
-$cities = array("DB", "EHV", "BRE", "TIL", "UTR", "NMG", "ARN", "RMD", "VNL", "STD");
 
-for($i = 0; $i < 2500; $i++)
+
+for($i = 0; $i < 5; $i++)
 {
     $code = '';
-    $city_pos = rand(0, 3);
-    for($j = 0; $j < 4; $j++)
+    for($j = 0; $j < 3; $j++)
     {
-        if($j == $city_pos)
-        {
-            $code .= $cities[array_rand($cities, 1)];
-        }
-        else
-        {
-            $code .= rand(0, 9);
-        }
-
-        if($j < 3)
-        {
-            $code .= " ";
-        }
-        
+        $code .= rand(0, 9);
     }
 
     $img = new TextToImage;
